@@ -202,8 +202,7 @@ body {
 @keyframes cfFall{
   0%{transform:translateY(-80px) rotate(0);opacity:1;}
   90%{opacity:1;}
-  100%{transform:translateY(105vh) rotate(600deg);opacity:0;}
-}
+  100%{transform:translateY(105vh) rotate(600deg);opacity:0;}}
 
 /* ── Divider ── */
 .divider{
@@ -451,11 +450,13 @@ function showFinal() {
   const text = [
     "لين 🤍",
     "",
-    "\"وما نيل المطالب بالتمني",
-    "ولكن تؤخذ الدنيا غلابا\"",
+    "خذ حط بميلادك تزيّن لك",
+    "كفوف الغلا حنّا",
+    "وعسى السعادة بدارك دوم",
+    "مـدودة",
     "",
-    "كل عام وانتِ بخير،",
-    "وتبقين جميلة من جوا وبرّا 🌿"
+    "يا جعل ربي يحقق فيك ما نتمنى",
+    "وتبقى لنا غاليٍ والطيب من جودة"
   ].join("\n");
 
   let i = 0;
@@ -491,7 +492,7 @@ function launchFireworks() {
         const sp = document.createElement("div");
         sp.className = "spark";
         const sz = Math.random() * 5 + 3;
-        sp.style.cssText = `left:${cx}vw;top:${cy}vh;width:${sz}px;height:${sz}px;background:${cols[Math.floor(Math.random()*cols.length)]};--tx:translate(${Math.cos(ang)*dist}px,${Math.sin(ang)*dist}px);animation-duration:${.45+Math.random()*.4}s;`;
+        sp.style.cssText = `left:${cx}vw;top:${cy}vh;width:${sz}px;height:${sz}px;background:${cols[Math.floor(Math.random()*cols.length)]};--tx:translate(${Math.cos(ang)*dist}px,${Math.sin(ang)*dist}px);animation-duration:${800 + Math.random()*400}ms;`;
         document.body.appendChild(sp);
         setTimeout(() => sp.remove(), 1000);
       }
@@ -506,7 +507,7 @@ function launchConfetti() {
     const c = document.createElement("div");
     c.className = "cf";
     const sz = Math.random() * 9 + 5;
-    c.style.cssText = `left:${Math.random()*100}%;width:${sz}px;height:${sz}px;background:${cols[Math.floor(Math.random()*cols.length)]};border-radius:${Math.random()>.5?"50%":"3px"};animation-duration:${Math.random()*3+2.5}s;animation-delay:${Math.random()*2}s;`;
+    c.style.cssText = `left:${Math.random()*100}%;width:${sz}px;height:${sz}px;background:${cols[Math.floor(Math.random()*cols.length)]};border-radius:${Math.random()>.5?"50%":"3px"};animation-duration:${2800 + Math.random()*1200}ms;animation-delay:${Math.random()*600}ms;`;
     document.body.appendChild(c);
   }
 }
